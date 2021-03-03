@@ -8,7 +8,7 @@
  */
 
 
- .btn-color {
+.btn-color {
 	background: #10519f !important;
 	color: #fff !important;
 	height: 38px;
@@ -40,4 +40,18 @@
 
 .btn-color-focus {
 	box-shadow: 0 0 0 0.2rem #e3dbfe;
+}
+
+.btn-add-mqh {
+	height: 38px;
+	border: 1px solid #d0d0d0 !important;
+}
+
+.btn-add-mqh:disabled {
+	border-color: #f8f9fa !important;
+}
+
+.btn-relation {
+	height: 34px!important;
+	padding: .255rem .55rem !important;
 }

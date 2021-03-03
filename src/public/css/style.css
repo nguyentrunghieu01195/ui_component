@@ -1,0 +1,38 @@
+/**
+ * @description 
+ * @since Wednesday, 3 3rd 2021, 8:16:22 am
+ * @author Nguyễn Trung Hiếu <nguyentrunghieu@getflycrm.com>
+ * @copyright Copyright (c) 2021, GETFLY VN TECH.,JSC
+ * -----
+ * Change Log: <press Ctrl + alt + c write chanelog>
+ */
+
+
+.font20{
+	font-size: 20px !important;
+}
+
+.font24 {
+	font-size: 24px !important;
+}
+
+.pointer{
+	cursor: pointer;
+}
+
+.pagination .page-link{
+	padding: 7.5px 11px;
+}
+
+.pagination .btn-relation{
+	line-height: 26px;
+}
+
+.form-control {
+	font-size: 14px;
+	height: calc(2.25rem + 2px);
+}
+
+.color-blue {
+	color: #10519F !important;
+}

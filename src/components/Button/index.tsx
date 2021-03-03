@@ -18,7 +18,6 @@ export interface PropsButton {
 	size?: 'large' | 'normal',
 	className?: string,
 	disabled?: boolean,
-	onClick?: (e: any) => void,
 	[propName: string]: any;
 }
 
@@ -42,7 +41,7 @@ class Button extends Component<PropsButton> {
 				{...props}
 			>
 				{icon &&
-					<i className={`fa ${icon} pr-1`} />
+					<i className={`fa ${icon}`} />
 				}
 				{innerText || this.props.children}
 			</button>
