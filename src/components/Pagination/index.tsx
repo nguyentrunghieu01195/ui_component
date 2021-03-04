@@ -116,15 +116,17 @@ class Pagination extends Component<PropsPagination, StatePagination> {
 		const isNext = page >= totalPage ? true : false;
 		let stly = isAccount ? { height: 34, fontSize: 15 } : {};
 
-		let t = new Translate();
-		t.setLocale(locale ? locale : 'vi');
+		let translate = new Translate();
+		translate.setLocale(locale ? locale : 'vi');
+		
+		let t = translate.getTranslate;
 		return (
 			<>
 				{(totalPage > 0 && page > 0) ? (page - 1) * limit + 1 : 0} -&nbsp;
 				{(page - 1) * limit + limit}&nbsp;
 				{
 					showTotalRecord &&
-					`${t.getTranslate('of')} ${totalRecord} `
+					`${t('of')} ${totalRecord} `
 				}
 				<ul className="pagination d-inline-flex mb-0">
 					<li
@@ -152,7 +154,7 @@ class Pagination extends Component<PropsPagination, StatePagination> {
 								perPage.map((v: number, idx: number) => {
 									return (
 										<option value={v} key={idx}>
-											{t.getTranslate('display_result_number', {value: v})}
+											{t('display_result_number', {value: v})}
 										</option>
 									);
 								})

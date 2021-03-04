@@ -41,24 +41,25 @@ class EmptyState extends Component<PropsEmptyState>{
 	render(){
 		const {type, locale, text} = this.props;
 		
-		let t = new Translate();
-		t.setLocale(locale ? locale : 'vi');
+		let translate = new Translate();
+		translate.setLocale(locale ? locale : 'vi');
+		let t = translate.getTranslate;
 
 		switch(type){
 			case 'data':
-				return this.renderEmptyState(IMG_NO_DATA, text ? text : t.getTranslate('no_data'));
+				return this.renderEmptyState(IMG_NO_DATA, text ? text : t('no_data'));
 			case 'order':
-				return this.renderEmptyState(IMG_NO_ORDER, text ? text : t.getTranslate('no_orders_found'));
+				return this.renderEmptyState(IMG_NO_ORDER, text ? text : t('no_orders_found'));
 			case 'task':
-				return this.renderEmptyState(IMG_NO_TASK, text ? text : t.getTranslate('no_tasks_found'));
+				return this.renderEmptyState(IMG_NO_TASK, text ? text : t('no_tasks_found'));
 			case 'customer':
-				return this.renderEmptyState(IMG_NO_CUSTOMER, text ? text : t.getTranslate('no_customers_found'));
+				return this.renderEmptyState(IMG_NO_CUSTOMER, text ? text : t('no_customers_found'));
 			case 'voucher':
-				return this.renderEmptyState(IMG_NO_VOUCHER, text ? text : t.getTranslate('no_data'));
+				return this.renderEmptyState(IMG_NO_VOUCHER, text ? text : t('no_data'));
 			case 'product':
-				return this.renderEmptyState(IMG_NO_PRODUCT, text ? text : t.getTranslate('no_products_found'));
+				return this.renderEmptyState(IMG_NO_PRODUCT, text ? text : t('no_products_found'));
 			case 'fund':
-				return this.renderEmptyState(IMG_NO_FUND, text ? text : t.getTranslate('no_funds_found'));
+				return this.renderEmptyState(IMG_NO_FUND, text ? text : t('no_funds_found'));
 			default:
 				return(<></>)
 		}

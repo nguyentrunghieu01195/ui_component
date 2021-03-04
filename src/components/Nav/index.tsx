@@ -47,8 +47,8 @@ class Nav extends Component<PropsNav>{
 					data.map((item: Item, idx: number) => <React.Fragment key={idx}>
 						{item.type === 'dropdown' ?
 							<li className={`nav-item ${item.className ? item.className : ''}`}>
-								<a className={`nav-link dropdown-toggle color-blue ${activeTab === item.href || (item.childs && item.childs.findIndex(i => i.href === `${activeTab}`) >= 0) ? 'active' : ''}`}
-								tabIndex={-1} id={item.id ? item.id : ''} data-toggle="dropdown">{item.title}</a>
+								<a className={`nav-link dropdown-toggle ${activeTab === item.href || (item.childs && item.childs.findIndex(i => i.href === `${activeTab}`) >= 0) ? 'active' : ''}`}
+								tabIndex={-1} id={item.id ? item.id : ''} data-toggle="dropdown" href="#">{item.title}</a>
 								<div className="dropdown-menu">
 									{item.childs && item.childs.length > 0 &&
 										item.childs.map((child, index) => <a key={index} className={`dropdown-item tab-child ${child.className ? child.className : ''}${activeTab === child.href ? 'active' : ''}`}

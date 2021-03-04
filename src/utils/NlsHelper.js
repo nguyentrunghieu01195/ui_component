@@ -21,11 +21,11 @@ const replateString = (string, values = {}) => {
 class Translate {
 	static locale = '';
 
-	setLocale = (locale) => {
+	setLocale = (locale = 'vi') => {
 		this.locale = locale;
 	}
 
-	getTranslate = (key, values = {}) => {
+	getTranslate = (key = '', values = {}) => {
 		let nls = require(`../nls/${this.locale}.json`);
 	
 		let string = nls && nls[key] ? nls[key] : key;

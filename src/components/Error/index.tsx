@@ -27,8 +27,9 @@ class Error extends Component<PropsError>{
 	render(){
 		const {type, locale, img_type} = this.props;
 
-		let t = new Translate();
-		t.setLocale(locale ? locale : 'vi');
+		let translate = new Translate();
+		translate.setLocale(locale ? locale : 'vi');
+		let t = translate.getTranslate;
 
 		let img = '';
 		switch(img_type){
@@ -53,9 +54,9 @@ class Error extends Component<PropsError>{
 							<img src={img} className="img-fluid" alt="Page not found"/>
 						</Col>
 						<Col lg={4} className="p-4 text-center">
-							<h1 className="font-weight-bold color-blue font50">{t.getTranslate('page_not_exist')}</h1>
-							<p className="font24">{t.getTranslate('page_not_exist_txt')}</p>
-							<Button type="primary" className="mt-3" onClick={() => window.location.hash = '/'}>{t.getTranslate('go_to_home')}</Button>
+							<h1 className="font-weight-bold color-blue font50">{t('page_not_exist')}</h1>
+							<p className="font24">{t('page_not_exist_txt')}</p>
+							<Button type="primary" className="mt-3" onClick={() => window.location.hash = '/'}>{t('go_to_home')}</Button>
 						</Col>
 					</Row>
 				);
@@ -66,9 +67,9 @@ class Error extends Component<PropsError>{
 							<img src={img} className="img-fluid" alt="Access denied"/>
 						</Col>
 						<Col lg={4} className="p-4 text-center">
-							<h1 className="font-weight-bold color-blue font50">{t.getTranslate('ooops')}</h1>
-							<p className="font24">{t.getTranslate('txt_ooops')}</p>
-							<Button type="primary" className="mt-3" onClick={() => window.location.hash = '/'}>{t.getTranslate('go_to_home')}</Button>
+							<h1 className="font-weight-bold color-blue font50">{t('ooops')}</h1>
+							<p className="font24">{t('txt_ooops')}</p>
+							<Button type="primary" className="mt-3" onClick={() => window.location.hash = '/'}>{t('go_to_home')}</Button>
 						</Col>
 					</Row>
 				);
