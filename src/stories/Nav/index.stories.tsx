@@ -10,7 +10,7 @@
 
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import Nav, {PropsNav} from '../../components/Nav';
+import {Nav, PropsNav} from '../../components';
 
 export default {
 	title: 'Nav',
@@ -52,18 +52,21 @@ const Template: Story<PropsNav> = (args) => <Nav {...args} />;
 export const Default = Template.bind({});
 Default.args = {
 	id: 'nav_example',
+	activeTab: 'discussion',
 	data: [
 		{
 			title: 'Trao đổi',
 			type: 'tab',
 			id: 'discussion',
-			href: 'discussion'
+			href: 'discussion',
+			onClick: (e: object) => console.log('onClick discussion', e)
 		},
 		{
 			title: 'Phản hồi',
 			type: 'tab',
 			id: 'feedback',
-			href: 'feedback'
+			href: 'feedback',
+			onClick: (e: object) => console.log('onClick feedback', e)
 		},
 		{
 			title: 'Giao dịch',
@@ -73,11 +76,13 @@ Default.args = {
 			childs: [
 				{
 					title: 'Thống kê',
-					href: 'report'
+					href: 'report',
+					onClick: (e: object) => console.log('onClick report', e)
 				},
 				{
 					title: 'Công nợ',
-					href: 'liabilities'
+					href: 'liabilities',
+					onClick: (e: object) => console.log('onClick liabilities', e)
 				}
 			]
 		}

@@ -10,10 +10,7 @@
 
 
 import { Story, Meta } from '@storybook/react/types-6-0';
-
-import Container from '../../components/Layout/Container';
-import Row, {PropsRow} from '../../components/Layout/Row';
-import Col from '../../components/Layout/Column';
+import {Container, Row, Col, PropsRow} from '../../components';
 
 export default {
 	title: 'Layout/Row',

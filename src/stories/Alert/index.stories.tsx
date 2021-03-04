@@ -9,7 +9,7 @@
 
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import Alert, {PropsAlert} from '../../components/Alert';
+import {Alert, PropsAlert} from '../../components';
 
 export default {
 	title: 'Alert',

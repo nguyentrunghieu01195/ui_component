@@ -13,7 +13,7 @@ import './Button.css';
 
 export interface PropsButton {
 	innerText?: string,
-	type?: 'primary' | 'primary-hover' | 'primary-focus' | 'outline' | 'outline-hover' | 'outline-focus',
+	type?: 'primary' | 'primary-hover' | 'primary-focus' | 'success' | 'danger' | 'warning' | 'outline' | 'outline-hover' | 'outline-focus' | 'link',
 	icon?: string,
 	size?: 'large' | 'normal',
 	className?: string,
@@ -24,15 +24,35 @@ export interface PropsButton {
 class Button extends Component<PropsButton> {
 
 	render() {
-		const {innerText, type, icon, size, className, disabled, ...props} = this.props;
+		const {innerText, type, icon, size, className, disabled, onClick, ...props} = this.props;
 		let class_type = {
 			primary: 'btn-color',
 			'primary-hover': 'btn-color-orange',
 			'primary-focus': 'btn-color btn-color-focus',
 			outline: 'btn-color-outline',
 			'outline-hover': 'btn-color-outline-orange',
-			'outline-focus': 'btn-color-outline btn-color-focus'
+			'outline-focus': 'btn-color-outline btn-color-focus',
+			'success': 'btn-success',
+			'warning': 'btn-warning text-white',
+			'danger': 'btn-danger',
+			'link': ''
 		};
+
+		if(type === 'link'){
+			return(
+				<a
+					className={`color-blue${className ? ` ${className}` : ''} pointer`}
+					tabIndex={-1}
+					onClick={e => onClick && !disabled ? onClick(e) : ''}
+					{...props}
+				>
+					{icon &&
+						<i className={`fa ${icon}`} />
+					}
+					{innerText || this.props.children}
+				</a>
+			);
+		}
 
 		return (
 			<button

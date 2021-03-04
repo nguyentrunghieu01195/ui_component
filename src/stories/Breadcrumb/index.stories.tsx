@@ -9,7 +9,7 @@
 
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import Breadcrumb, {PropsBreadcrumb} from '../../components/Breadcrumb';
+import {Breadcrumb, PropsBreadcrumb} from '../../components';
 
 export default {
 	title: 'Breadcrumb',

@@ -9,14 +9,11 @@
 
 
 import { Story, Meta } from '@storybook/react/types-6-0';
-
-import ContainerCompoent, {PropsContainer} from '../../components/Layout/Container';
-import Row from '../../components/Layout/Row';
-import Col from '../../components/Layout/Column';
+import {Container, Row, Col, PropsContainer} from '../../components';
 
 export default {
 	title: 'Layout/Container',
-	component: ContainerCompoent,
+	component: Container,
 	argTypes: {
 		className: {
 			description: 'Class'
@@ -32,7 +29,7 @@ export default {
 	}
 } as Meta;
 
-const TemplateContainer: Story<PropsContainer> = (args) => <ContainerCompoent {...args}>
+const TemplateContainer: Story<PropsContainer> = (args) => <Container {...args}>
 	<Row>
 		<Col
 			xl={12}
@@ -45,7 +42,7 @@ const TemplateContainer: Story<PropsContainer> = (args) => <ContainerCompoent {.
 			inner={'Container'}
 		>Default</Col>
 	</Row>
-</ContainerCompoent>
+</Container>
 
-export const Container = TemplateContainer.bind({});
-Container.args = {};
+export const Default = TemplateContainer.bind({});
+Default.args = {};

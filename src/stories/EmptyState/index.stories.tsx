@@ -10,7 +10,7 @@
 
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import EmptyState, {PropsEmptyState} from '../../components/EmptyState';
+import {EmptyState, PropsEmptyState} from '../../components';
 
 export default {
 	title: 'EmptyState',

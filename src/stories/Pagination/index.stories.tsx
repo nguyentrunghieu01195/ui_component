@@ -10,7 +10,7 @@
 
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import Pagination, {PropsPagination} from '../../components/Pagination';
+import {Pagination, PropsPagination} from '../../components';
 
 export default {
 	title: 'Pagination',

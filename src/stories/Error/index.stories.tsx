@@ -10,7 +10,7 @@
 
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import Error, {PropsError} from '../../components/Error';
+import {Error, PropsError} from '../../components';
 
 export default {
 	title: 'Error',

@@ -10,7 +10,7 @@
  
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import Loading, {PropsLoading} from '../../components/Loading';
+import {Loading, PropsLoading} from '../../components';
 
 export default {
 	title: 'Loading',
