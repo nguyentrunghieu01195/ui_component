@@ -13,7 +13,7 @@ import './Button.css';
 
 export interface PropsButton {
 	innerText?: string,
-	type?: 'primary' | 'primary-hover' | 'primary-focus' | 'success' | 'danger' | 'warning' | 'outline' | 'outline-hover' | 'outline-focus' | 'link',
+	type?: 'primary' | 'primary-hover' | 'primary-focus' | 'success' | 'danger' | 'warning' | 'light' | 'outline' | 'outline-hover' | 'outline-focus' | 'outline-secondary' | 'link',
 	icon?: string,
 	size?: 'large' | 'normal',
 	className?: string,
@@ -32,10 +32,12 @@ class Button extends Component<PropsButton> {
 			outline: 'btn-color-outline',
 			'outline-hover': 'btn-color-outline-orange',
 			'outline-focus': 'btn-color-outline btn-color-focus',
+			'outline-secondary': 'btn-outline-secondary',
 			'success': 'btn-success',
 			'warning': 'btn-warning text-white',
 			'danger': 'btn-danger',
-			'link': ''
+			'link': '',
+			'light': 'btn-light border'
 		};
 
 		if(type === 'link'){

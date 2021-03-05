@@ -55,3 +55,8 @@
 	height: 34px!important;
 	padding: .255rem .55rem !important;
 }
+
+.btn-color-outline:hover {
+	border: 1px solid #f36a26 !important;
+	color: #f36a26 !important;
+}

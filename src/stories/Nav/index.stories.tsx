@@ -10,7 +10,7 @@
 
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import {Nav, PropsNav} from '../../components';
+import {Nav, PropsNav, TabContent, TabPane} from '../../components';
 
 export default {
 	title: 'Nav',
@@ -25,6 +25,7 @@ data: {
 	data: Array<Item>,
 	className?: string,
 	id: string,
+	id_content: string,
 	[propName: string]: any
 }
 Item: {
@@ -47,31 +48,48 @@ Child: {
 	}
 } as Meta;
 
-const Template: Story<PropsNav> = (args) => <Nav {...args} />;
+const Template: Story<PropsNav> = (args) => <>
+	<Nav {...args} />
+	<TabContent id="nav_example_content">
+		<TabPane className="show active" id="discussion">
+			Tab trao đổi
+		</TabPane>
+		<TabPane id="feedback">
+			Tab phản hồi
+		</TabPane>
+		<TabPane id="report">
+			Tab thống kê
+		</TabPane>
+		<TabPane id="liabilities">
+			Tab Công nợ
+		</TabPane>
+	</TabContent>
+</>;
 
 export const Default = Template.bind({});
 Default.args = {
 	id: 'nav_example',
+	id_content: 'nav_example_content',
 	activeTab: 'discussion',
 	data: [
 		{
 			title: 'Trao đổi',
 			type: 'tab',
-			id: 'discussion',
+			id: 'discussion-tab',
 			href: 'discussion',
 			onClick: (e: object) => console.log('onClick discussion', e)
 		},
 		{
 			title: 'Phản hồi',
 			type: 'tab',
-			id: 'feedback',
+			id: 'feedback-tab',
 			href: 'feedback',
 			onClick: (e: object) => console.log('onClick feedback', e)
 		},
 		{
 			title: 'Giao dịch',
 			type: 'dropdown',
-			id: 'trade',
+			id: 'trade-tab',
 			href: 'trade',
 			childs: [
 				{

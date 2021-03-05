@@ -9,26 +9,30 @@
 
 
 import Alert, {PropsAlert} from './Alert';
+import Avatar, {PropsAvatar} from './Avatar';
+import Badge, {PropsBadge} from './Badge';
 import Breadcrumb, {PropsBreadcrumb} from './Breadcrumb';
 import Button, {PropsButton} from './Button';
+import ButtonGroup, {PropsButtonGroup} from './ButtonGroup';
 import Checkbox, {PropsCheckbox} from './Checkbox';
+import Dropdown, {PropsDropdown} from './Dropdown';
 import EmptyState, {PropsEmptyState} from './EmptyState';
 import Error, {PropsError} from './Error';
 import Container, {PropsContainer} from './Layout/Container';
 import Row, {PropsRow} from './Layout/Row';
 import Col, {PropsCol} from './Layout/Column';
 import Loading, {PropsLoading} from './Loading';
-import Nav, {PropsNav} from './Nav';
+import Nav, {PropsNav, TabContent, TabPane} from './Nav';
 import Pagination, {PropsPagination} from './Pagination';
 import Radio, {PropsRadio} from './Radio';
 import Switch, {PropsSwitch} from './Switch';
 
 export {
-	Alert, Breadcrumb, Button, Checkbox, EmptyState, Error, Container,
-	Row, Col, Loading, Nav, Pagination, Radio, Switch
+	Alert, Avatar, Badge, Breadcrumb, Button, ButtonGroup, Checkbox, EmptyState, Error, Container,
+	Row, Col, Loading, Nav, TabContent, TabPane, Pagination, Radio, Switch, Dropdown
 };
 
 export type {
-	PropsAlert, PropsBreadcrumb, PropsButton, PropsCheckbox, PropsEmptyState, PropsError, PropsContainer,
-	PropsRow, PropsCol, PropsLoading, PropsNav, PropsPagination, PropsRadio, PropsSwitch
+	PropsAlert, PropsAvatar, PropsBadge, PropsBreadcrumb, PropsButton, PropsButtonGroup, PropsCheckbox, PropsEmptyState, PropsError, PropsContainer,
+	PropsRow, PropsCol, PropsLoading, PropsNav, PropsPagination, PropsRadio, PropsSwitch, PropsDropdown
 };

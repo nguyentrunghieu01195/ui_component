@@ -10,8 +10,12 @@
 
 
 import React, { Component } from 'react';
-import {changeTabActive, changeDropdownActive} from '../../utils/NavHelper';
+import {changeTabActive, changeDropdownActive, changeTabPane} from '../../utils/NavHelper';
+import TabContent from './TabContent';
+import TabPane from './TabPane';
 import './Nav.css';
+
+export {TabContent, TabPane};
 
 interface Child {
 	title: string,
@@ -34,14 +38,16 @@ export interface PropsNav {
 	data: Array<Item>,
 	className?: string,
 	id: string,
+	id_content: string,
 	activeTab: string,
 	[propName: string]: any
 }
 
 class Nav extends Component<PropsNav>{
 	render(){
-		const {data, className, id, activeTab, ...props} = this.props;
+		const {data, className, id, id_content, activeTab, ...props} = this.props;
 		return(
+			<>
 			<ul className={`nav nav-tabs gf-tab ${className ? className : ''}`} id={id} {...props} role="tablist">
 				{data.length > 0 &&
 					data.map((item: Item, idx: number) => <React.Fragment key={idx}>
@@ -56,6 +62,7 @@ class Nav extends Component<PropsNav>{
 											href={`#${child.href ? child.href : ''}`}
 											onClick={() => {
 												changeDropdownActive({ tab_id: child.href, parent: item.id, id_ul: id });
+												changeTabPane(id_content, child.href);
 												child.onClick && child.onClick(child);
 											}}
 										>
@@ -70,6 +77,7 @@ class Nav extends Component<PropsNav>{
 								<a className={`nav-link ${activeTab === item.href ? 'active' : ''}`} id={item.id ? item.id : ''} data-toggle="tab" href={`#${item.href ? item.href : ''}`}
 									onClick={() => {
 										changeTabActive({ tab_id: item.href });
+										changeTabPane(id_content, item.href);
 										item.onClick && item.onClick(item);
 									}}
 								>
@@ -80,6 +88,7 @@ class Nav extends Component<PropsNav>{
 					</React.Fragment>)
 				}
 			</ul>
+			</>
 		);
 	}
 }
