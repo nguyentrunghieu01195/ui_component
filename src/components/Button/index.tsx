@@ -13,11 +13,12 @@ import './Button.css';
 
 export interface PropsButton {
 	innerText?: string,
-	type?: 'primary' | 'primary-hover' | 'primary-focus' | 'success' | 'danger' | 'warning' | 'light' | 'outline' | 'outline-hover' | 'outline-focus' | 'outline-secondary' | 'link',
+	type?: 'primary' | 'primary-hover' | 'primary-focus' | 'success' | 'danger' | 'warning' | 'light' | 'outline' | 'outline-hover' | 'outline-focus' | 'outline-secondary' | 'link' | 'circle',
 	icon?: string,
 	size?: 'large' | 'normal',
 	className?: string,
 	disabled?: boolean,
+	onClick?: (e: any) => void,
 	[propName: string]: any;
 }
 
@@ -37,7 +38,8 @@ class Button extends Component<PropsButton> {
 			'warning': 'btn-warning text-white',
 			'danger': 'btn-danger',
 			'link': '',
-			'light': 'btn-light border'
+			'light': 'btn-light border',
+			'circle': 'btn-circle'
 		};
 
 		if(type === 'link'){
@@ -60,6 +62,7 @@ class Button extends Component<PropsButton> {
 			<button
 				className={`btn${className ? ` ${className}` : ''}${size === 'large' ? ' button-height' : ''}${type && class_type[type] ? ` ${class_type[type]}` : ''}`}
 				disabled={disabled}
+				onClick={e => onClick && onClick(e)}
 				{...props}
 			>
 				{icon &&

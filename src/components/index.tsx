@@ -15,6 +15,8 @@ import Breadcrumb, {PropsBreadcrumb} from './Breadcrumb';
 import Button, {PropsButton} from './Button';
 import ButtonGroup, {PropsButtonGroup} from './ButtonGroup';
 import Checkbox, {PropsCheckbox} from './Checkbox';
+import {ColorCode, PropsColorCode} from './Color';
+import {ColorClass, PropsColorClass} from './Color';
 import Dropdown, {PropsDropdown} from './Dropdown';
 import EmptyState, {PropsEmptyState} from './EmptyState';
 import Error, {PropsError} from './Error';
@@ -26,13 +28,18 @@ import Nav, {PropsNav, TabContent, TabPane} from './Nav';
 import Pagination, {PropsPagination} from './Pagination';
 import Radio, {PropsRadio} from './Radio';
 import Switch, {PropsSwitch} from './Switch';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'font-awesome/css/font-awesome.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+import '../public/css/style.css';
+import '../public/css/color.css';
 
 export {
-	Alert, Avatar, Badge, Breadcrumb, Button, ButtonGroup, Checkbox, EmptyState, Error, Container,
-	Row, Col, Loading, Nav, TabContent, TabPane, Pagination, Radio, Switch, Dropdown
+	Alert, Avatar, Badge, Breadcrumb, Button, ButtonGroup, Checkbox, ColorCode, EmptyState, Error, Container,
+	Row, Col, Loading, Nav, TabContent, TabPane, Pagination, Radio, Switch, Dropdown, ColorClass
 };
 
 export type {
-	PropsAlert, PropsAvatar, PropsBadge, PropsBreadcrumb, PropsButton, PropsButtonGroup, PropsCheckbox, PropsEmptyState, PropsError, PropsContainer,
-	PropsRow, PropsCol, PropsLoading, PropsNav, PropsPagination, PropsRadio, PropsSwitch, PropsDropdown
+	PropsAlert, PropsAvatar, PropsBadge, PropsBreadcrumb, PropsButton, PropsButtonGroup, PropsCheckbox, PropsColorCode, PropsEmptyState, PropsError, PropsContainer,
+	PropsRow, PropsCol, PropsLoading, PropsNav, PropsPagination, PropsRadio, PropsSwitch, PropsDropdown, PropsColorClass
 };

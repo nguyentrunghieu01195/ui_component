@@ -60,3 +60,11 @@
 	border: 1px solid #f36a26 !important;
 	color: #f36a26 !important;
 }
+
+.btn-circle{
+	border-radius: 100% !important;
+	width: 40px !important;
+	height: 40px !important;
+	border: 1px solid #d0d0d0 !important;
+	font-size: 0 !important;
+}

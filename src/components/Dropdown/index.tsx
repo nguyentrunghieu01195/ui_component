@@ -13,21 +13,21 @@ import {Button, ButtonGroup} from '../index';
 
 export interface PropsDropdown {
 	id?: string,
-	type?: 'primary' | 'primary-hover' | 'primary-focus' | 'success' | 'danger' | 'warning' | 'light' | 'outline' | 'outline-hover' | 'outline-focus' | 'outline-secondary' | 'link',
+	type?: 'primary' | 'primary-hover' | 'primary-focus' | 'success' | 'danger' | 'warning' | 'light' | 'outline' | 'outline-hover' | 'outline-focus' | 'outline-secondary' | 'link' | 'circle',
 	position?: 'up' | 'right' | 'down' | 'left',
-	text: string,
+	text?: string,
 	[propName: string]: any
 };
 
 class Dropdown extends Component<PropsDropdown> {
 	render(){
-		const {id, type, position, text, ...props} = this.props;
+		const {id, type, position, text, menuStyle, ...props} = this.props;
 		return (
 			<ButtonGroup className={position ? `drop${position}` : ''}>
-				<Button className="dropdown-toggle" type={type ? type : 'primary'} data-toggle="dropdown" {...props}>
-					{text}
+				<Button className="dropdown-toggle" {...type ? {type: type} : ''} data-toggle="dropdown" {...props}>
+					{text ? text : ''}
 				</Button>
-				<div className="dropdown-menu">
+				<div className="dropdown-menu" {...menuStyle ? {style: menuStyle} : ''}>
 					{this.props.children}
 				</div>
 			</ButtonGroup>
