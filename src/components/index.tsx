@@ -28,6 +28,8 @@ import Nav, {PropsNav, TabContent, TabPane} from './Nav';
 import Pagination, {PropsPagination} from './Pagination';
 import Radio, {PropsRadio} from './Radio';
 import Switch, {PropsSwitch} from './Switch';
+import Typography, { PropsTypography } from './Typography';
+import Shadow, { PropsShadow } from './Shadow';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
@@ -36,10 +38,10 @@ import '../public/css/color.css';
 
 export {
 	Alert, Avatar, Badge, Breadcrumb, Button, ButtonGroup, Checkbox, ColorCode, EmptyState, Error, Container,
-	Row, Col, Loading, Nav, TabContent, TabPane, Pagination, Radio, Switch, Dropdown, ColorClass
+	Row, Col, Loading, Nav, TabContent, TabPane, Pagination, Radio, Switch, Dropdown, ColorClass, Typography, Shadow
 };
 
 export type {
 	PropsAlert, PropsAvatar, PropsBadge, PropsBreadcrumb, PropsButton, PropsButtonGroup, PropsCheckbox, PropsColorCode, PropsEmptyState, PropsError, PropsContainer,
-	PropsRow, PropsCol, PropsLoading, PropsNav, PropsPagination, PropsRadio, PropsSwitch, PropsDropdown, PropsColorClass
+	PropsRow, PropsCol, PropsLoading, PropsNav, PropsPagination, PropsRadio, PropsSwitch, PropsDropdown, PropsColorClass, PropsTypography, PropsShadow
 };
