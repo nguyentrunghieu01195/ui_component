@@ -15,7 +15,7 @@ export interface PropsShadow {
 	type?: 'shadow1' | 'shadow2' | 'shadow3' | 'shadow4' | 'shadow5' | 'shadow6'
 }
 
-class Typography extends Component<PropsShadow> {
+class Shadow extends Component<PropsShadow> {
 	render() {
 		const { type } = this.props;
 		return (
@@ -24,4 +24,4 @@ class Typography extends Component<PropsShadow> {
 	}
 }
 
-export default Typography;
+export default Shadow;

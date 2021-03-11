@@ -11,5 +11,6 @@
 	"no_products_found": "No products found",
 	"no_funds_found": "No funds found",
 	"ooops": "Ooops!",
-	"txt_ooops": "Are you authorized to do this task? Please check your rights!"
+	"txt_ooops": "Are you authorized to do this task? Please check your rights!",
+	"required": "Obligatory"
 }

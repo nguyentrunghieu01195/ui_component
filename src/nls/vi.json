@@ -11,5 +11,6 @@
 	"no_products_found": "Không tìm thấy sản phẩm",
 	"no_funds_found": "Không tìm thấy quỹ",
 	"ooops": "Ooops!",
-	"txt_ooops": "Bạn có được phân quyền để làm tác vụ này không ? Hãy kiểm tra lại Quyền của bạn nhé!"
+	"txt_ooops": "Bạn có được phân quyền để làm tác vụ này không ? Hãy kiểm tra lại Quyền của bạn nhé!",
+	"required": "Bắt buộc"
 }
