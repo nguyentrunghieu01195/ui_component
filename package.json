@@ -1,7 +1,12 @@
 {
-  "name": "gf_components",
-  "version": "0.1.0",
-  "private": true,
+  "name": "package_test",
+  "version": "1.0.0",
+  "description": "A template test",
+  "author": "nguyentrunghieu01195",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/nguyentrunghieu01195/component_design.git"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -10,19 +15,22 @@
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-scripts": "4.0.3",
-    "typescript": "^4.1.2",
-    "web-vitals": "^1.0.1",
-    "jquery": "^3.4.1",
     "bootstrap": "4.4.1",
     "font-awesome": "^4.7.0",
-    "react-bootstrap": "^1.0.1"
+    "jquery": "^3.4.1",
+    "postcss": "^8.2.8",
+    "react": "^17.0.1",
+    "react-bootstrap": "^1.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.3",
+    "rollup-plugin-image": "^1.0.2",
+    "rollup-plugin-postcss": "^4.0.0",
+    "typescript": "^4.1.2",
+    "web-vitals": "^1.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "rollup -c",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
@@ -47,11 +55,22 @@
     ]
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^17.1.0",
+    "@rollup/plugin-node-resolve": "^11.2.0",
     "@storybook/addon-actions": "^6.1.20",
     "@storybook/addon-essentials": "^6.1.20",
     "@storybook/addon-links": "^6.1.20",
     "@storybook/node-logger": "^6.1.20",
     "@storybook/preset-create-react-app": "^3.1.6",
-    "@storybook/react": "^6.1.20"
-  }
+    "@storybook/react": "^6.1.20",
+    "rollup": "^2.41.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-typescript2": "^0.30.0"
+  },
+  "main": "./build/index.js",
+  "module": "./build/index.es.js",
+  "bugs": {
+    "url": "https://github.com/nguyentrunghieu01195/component_design/issues"
+  },
+  "homepage": "https://github.com/nguyentrunghieu01195/component_design#readme"
 }

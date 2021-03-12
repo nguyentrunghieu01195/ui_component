@@ -34,16 +34,16 @@ class Error extends Component<PropsError>{
 		let img = '';
 		switch(img_type){
 			case 1:
-				img = IMG_PAGE_NOT_FOUND;
+				img = require('./image/empty_404.png');
 				break;
 			case 2:
-				img = IMG_PAGE_NOT_FOUND_2;
+				img = require('./image/empty_404_2.png');
 				break;
 			case 3:
-				img = IMG_PAGE_NOT_FOUND_3;
+				img = require('./image/empty_404_3.png');
 				break;
 			default:
-				return img = IMG_PAGE_NOT_FOUND;
+				return img = require('./image/empty_404.png');
 		}
 
 		switch(type){

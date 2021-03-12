@@ -1,17 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import {Alert, Avatar, Badge, Breadcrumb, Button, ButtonGroup, Checkbox, ColorCode, EmptyState, Error, Container,
+	Row, Col, Loading, Nav, TabContent, TabPane, Pagination, Radio, Switch, Dropdown, ColorClass,
+  PropsAlert, PropsAvatar, PropsBadge, PropsBreadcrumb, PropsButton, PropsButtonGroup, PropsCheckbox, PropsColorCode, PropsEmptyState, PropsError, PropsContainer,
+	PropsRow, PropsCol, PropsLoading, PropsNav, PropsPagination, PropsRadio, PropsSwitch, PropsDropdown, PropsColorClass} from './components';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+export {
+  Alert, Avatar, Badge, Breadcrumb, Button, ButtonGroup, Checkbox, ColorCode, EmptyState, Error, Container,
+  Row, Col, Loading, Nav, TabContent, TabPane, Pagination, Radio, Switch, Dropdown, ColorClass
+};
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+export type {
+    PropsAlert, PropsAvatar, PropsBadge, PropsBreadcrumb, PropsButton, PropsButtonGroup, PropsCheckbox, PropsColorCode, PropsEmptyState, PropsError, PropsContainer,
+    PropsRow, PropsCol, PropsLoading, PropsNav, PropsPagination, PropsRadio, PropsSwitch, PropsDropdown, PropsColorClass
+  };
