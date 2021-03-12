@@ -9,7 +9,7 @@
 
 
 import React, { Component } from 'react';
-// import IMG_NO_AVATAR from './image/noavatar.png';
+import IMG_NO_AVATAR from './image/noavatar.png';
 import './Avatar.css';
 
 export interface PropsAvatar {
@@ -22,7 +22,7 @@ class Avatar extends Component<PropsAvatar> {
 	render(){
 		const {src, size} = this.props;
 		return(
-			<img src={src ? src : require('./image/noavatar.png')} alt="Avatar" width={size} height={size} className="avatar" />
+			<img src={src ? src : IMG_NO_AVATAR} alt="Avatar" width={size} height={size} className="avatar" />
 		);
 	}
 }

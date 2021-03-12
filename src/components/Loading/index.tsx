@@ -26,16 +26,16 @@ class Loading extends Component<PropsLoading>{
 		let img = '';
 		switch(type){
 			case 'logo':
-				img = require('./image/loading1.gif');
+				img = IMAGE_LOADING_1;
 				break;
 			case 'dot_spin':
-				img = require('./image/loading2.gif');
+				img = IMAGE_LOADING_2;
 				break;
 			case 'line_spin':
-				img = require('./image/loading3.gif');
+				img = IMAGE_LOADING_3;
 				break;
 			default:
-				img = require('./image/loading1.gif');
+				img = IMAGE_LOADING_1;
 				break;
 		}
 
