@@ -1,7 +1,12 @@
 {
-  "name": "gf_components",
-  "version": "0.1.0",
-  "private": true,
+  "name": "ui_component",
+  "version": "0.0.1",
+  "description": "Getfly component",
+  "author": "Nguyen Trung Hieu <nguyentrunghieu01195@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:nguyentrunghieu01195/ui_component.git"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -54,5 +59,10 @@
     "@storybook/node-logger": "^6.1.20",
     "@storybook/preset-create-react-app": "^3.1.6",
     "@storybook/react": "^6.1.20"
-  }
+  },
+  "main": "./src/components/index.tsx",
+  "bugs": {
+    "url": "https://github.com/nguyentrunghieu01195/ui_component.git/issues"
+  },
+  "homepage": "https://github.com/nguyentrunghieu01195/ui_component.git#readme"
 }
